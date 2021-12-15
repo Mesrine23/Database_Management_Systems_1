@@ -1,0 +1,14 @@
+-> 	block0 : each file has its own index and it is block0.
+		index[0]=block ??a ID=0		
+		index[1]=block ??a ID=1	
+		index[2]=block ??a ID=2 ( 0b10 )
+		.
+		.
+		.
+
+->	buckets: blocks with records
+		consists of 9 records (9*52 = 468bytes)
+		rest of the bytes consists of info like:
+		data[511] = overflow "pointer" to another bucket
+		data[510] = localDepth
+		data[509] = number of records already written
